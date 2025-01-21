@@ -431,16 +431,17 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+    },{id: "news-graduated-from-pes-university-with-a-bachelor-s-in-computer-science-with-distinction",
+          title: 'Graduated from PES University with a Bachelor’s in Computer Science with distinction.',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-started-career-as-developer-at-sap-labs-india",
+          title: 'Started career as Developer at SAP Labs India',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-joined-oracle-india-as-senior-member-technical-staff",
+          title: 'Joined Oracle India as Senior Member Technical Staff',
+          description: "",
+          section: "News",},{id: "news-started-master-s-in-computer-science-at-courant-institute-of-mathematical-sciences-new-york-university",
+          title: 'Started Master’s in Computer Science at Courant Institute of Mathematical Sciences, New York...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
@@ -492,28 +493,21 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
+          window.open("mailto:%73%61%74%79%61%6E%61%72%61%79%61%6E%61%63%68%69%6C%6C%61%6C%65@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
+        id: 'social-github',
+        title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
+          window.open("https://github.com/satyachillale", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
+        id: 'social-linkedin',
+        title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
+          window.open("https://www.linkedin.com/in/satyachillale", "_blank");
         },
       },{
         id: 'social-custom_social',
