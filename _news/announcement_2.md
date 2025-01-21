@@ -1,5 +1,6 @@
 ---
 layout: post
+<<<<<<< Updated upstream
 title: A long announcement with details
 date: 2015-11-07 16:11:00-0400
 inline: false
@@ -31,3 +32,11 @@ Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxide
 > —Anais Nin
 
 Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+=======
+date: 2017-07-10 15:59:00-0400
+inline: true
+related_posts: false
+---
+
+Started career as Developer at SAP Labs India
+>>>>>>> Stashed changes
