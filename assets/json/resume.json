@@ -217,6 +217,16 @@
       "url": "https://github.com/satyachillale/g3-gg"
     },
     {
+      "name": "Cola Kernels",
+      "summary": "custom CUDA kernels for Compositional Linear Algebra framework}, focusing on Arnoldi iteration, Cholesky decomposition, Hutchinson trace estimation, and SVD",
+      "highlights": [
+        "Achieved up to 5x speedup and reduced memory usage by 8x compared to PyTorch implementation."
+      ],
+      "startDate": "2024-08-01",
+      "endDate": "2024-12-20",
+      "url": "https://github.com/satyachillale/cola"
+    },
+    {
       "name": "Enhanced AODV",
       "summary": "Implemented an algorithm to improve communication efficiency among mobile devices in an ad-hoc network",
       "highlights": [
