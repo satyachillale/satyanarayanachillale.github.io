@@ -9,7 +9,6 @@ profile:
   image: prof_pic.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>+1 945-289-4804</p>
     <p>New York, NY</p>
 
 news: true # includes a list of news items
