@@ -49,8 +49,8 @@
       "institution": "New York University, Courant Institute of Mathematical Sciences",
       "location": "New York, NY",
       "url": "",
-      "area": "Computer Science",
-      "studyType": "Master of Science",
+      "area": "3.9/4.0",
+      "studyType": "Master of Science in Computer Science",
       "startDate": "2023-08-01",
       "endDate": "2025-05-01",
       "score": "3.9/4.0",
@@ -69,8 +69,8 @@
       "institution": "PES University",
       "location": "Bangalore, India",
       "url": "",
-      "area": "Computer Science and Engineering",
-      "studyType": "Bachelor of Engineering",
+      "area": "3.6/4.0",
+      "studyType": "Bachelor of Engineering in Computer Science and Engineering",
       "startDate": "2013-08-01",
       "endDate": "2017-06-20",
       "score": "3.6/4.0",
@@ -89,16 +89,30 @@
   "awards": [
     {
       "title": "Top 5 Ranking",
-      "date": "",
+      "date": "2016-07-01",
       "awarder": "inGenius Hackathon",
       "url": "",
-      "summary": "Developed a solution that substantially reduces ambulance travel time"
+      "summary": "Awarded among 100 teams across universities in Bangalore for developing a solution that significantly reduces ambulance travel time."
+    },
+    {
+      "title": "Catalyst",
+      "date": "2018-07-01",
+      "awarder": "SAP Labs",
+      "url": "",
+      "summary": "Awarded the SAP Catalyst recognition for outstanding contributions, exceptional learning ability, and potential to excel in critical roles"
+    },
+    {
+      "title": "Catalyst",
+      "date": "2019-07-01",
+      "awarder": "SAP Labs",
+      "url": "",
+      "summary": "Awarded the SAP Catalyst recognition second year in a row"
     }
   ],
   "certificates": [
     {
       "name": "Competent Communicator and Leader",
-      "date": "",
+      "date": "2019-03-01",
       "issuer": "Toastmasters International",
       "url": "",
       "icon": ""
@@ -187,9 +201,9 @@
       "highlights": [
         "Secured top-five position among 20 teams"
       ],
-      "startDate": "",
-      "endDate": "",
-      "url": ""
+      "startDate": "2024-01-01",
+      "endDate": "2024-05-20",
+      "url": "https://github.com/satyachillale/paradigm"
     },
     {
       "name": "Image Geolocation",
@@ -198,9 +212,9 @@
         "Implemented novel hierarchical feature clustering approach",
         "Achieved up to 85.08% accuracy at continent level and 15.01% at street level"
       ],
-      "startDate": "",
-      "endDate": "",
-      "url": ""
+      "startDate": "2024-08-01",
+      "endDate": "2024-12-20",
+      "url": "https://github.com/satyachillale/g3-gg"
     },
     {
       "name": "Enhanced AODV",
