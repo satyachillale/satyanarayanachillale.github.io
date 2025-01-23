@@ -401,9 +401,9 @@ ninja.data = [{
           section: "News",},{id: "news-started-master-s-in-computer-science-at-courant-institute-of-mathematical-sciences-new-york-university",
           title: 'Started Master’s in Computer Science at Courant Institute of Mathematical Sciences, New York...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-advancing-video-frame-prediction-and-segmentation",
+          title: 'Advancing Video Frame Prediction and Segmentation',
+          description: "A Dive into Masked Conditional Diffusion and U-Net",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
