@@ -404,6 +404,16 @@ ninja.data = [{
           description: "Predicting geographic coordinates from images using hierarchical clustering and retrieval augmented generation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
+            },},{id: "projects-cola-kernels",
+          title: 'CoLA Kernels',
+          description: "Optimized CUDA kernels for large-scale linear algebra",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
+            },},{id: "projects-image-geolocation",
+          title: 'Image Geolocation',
+          description: "Predicting geographic coordinates from images using hierarchical clustering and retrieval augmented generation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
             },},{
         id: 'social-email',
         title: 'email',
