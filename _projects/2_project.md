@@ -1,81 +1,72 @@
 ---
 layout: page
-title: project 2
+title: Image Geolocation
 description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+img: assets/img/geoclip_architecture.png
 importance: 2
 category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+[[Project Paper]](assets/pdf/CV_project_image_geolocation_final.pdf) [[Presentation]](assets/pdf/Image-Geolocation.pdf) [[Code]](https://github.com/satyachillale/g3-gg)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### Introduction
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+
+As computer vision systems scale to a global level, one particularly exciting challenge emerges: automatically determining precise geographic coordinates from a single image1
+. Not only can such geolocation models be beneficial for navigation or environmental monitoring, but they can also tackle problems like crime tracking and disaster response. The main hurdle is reconciling the sheer diversity of landscapes worldwide with robust machine learning workflows that can handle large-scale datasets spanning millions of images.
+
+### CLIP Meets Geolocation
+
+
+A key step forward comes from CLIP-like architectures that align images and text in a shared embedding space. Recent research proposes expanding CLIP by adding a specialized GPS encoder to represent latitude-longitude pairs in high-dimensional embeddings1
+. This approach, often referred to as GeoCLIP, allows continuous geographic coordinates (instead of discrete classes) to co-exist with images and textual information. By training the model to retrieve the matching GPS encoding for a given test image, GeoCLIP demonstrates accurate results for images taken almost anywhere on Earth.
+Yet, straightforward retrieval from a large, flat collection of GPS points can quickly become infeasible. Searching every coordinate in a gallery of 100K or more points is computationally expensive. This has led researchers to explore hierarchical structures to narrow down candidate regions, simulating how a human might first guess a continent or country and then progressively “zoom in” on a more precise area.
+
+### Hierarchical Feature Clustering
+
+
+To address the computational bottleneck, one promising solution is hierarchical feature clustering at multiple scales. Instead of lumping all GPS coordinates into a single pool, the approach organizes them into clusters at different geographic levels—continent, country, or city1
+. Each cluster corresponds to a centroid representing coordinates that are geographically and visually similar. During inference, the query image embedding is compared only against top-level centroids. Once the model identifies the most similar cluster, it moves to the sub-clusters in that region to further refine the search.
+By mimicking coarse-to-fine localization, this technique can cut down the number of comparisons by 100x while still preserving a high level of accuracy. It also allows flexibly adding more layers to the tree structure for very large datasets or for extremely fine-grained local predictions like neighborhoods or streets.
+
+### Retrieval-Augmented Generation (RAG)
+
+
+While pure retrieval-based methods are great for speed, they sometimes struggle with ambiguous images—think of uniform landscapes like deserts or unremarkable city blocks. Retrieval-Augmented Generation (RAG) tackles this challenge by leveraging large language models (LLMs). First, the system retrieves the top candidate locations from its hierarchical gallery. Then, an LLM such as GPT-4o or Mistral reasons about these candidates and suggests refined or alternate coordinates. This can be especially useful when there are text-based cues (like signs or landmarks) that can help the model disambiguate visually similar areas.
+When tested on geolocation benchmarks like IM2GPS3K, combining hierarchical retrieval with LLM-based generation produced more robust predictions, particularly for regions with visually similar terrains. The system can also include specific metadata like neighborhood names or local landmarks to further guide the LLM and improve street-level accuracy.
+
+### Results
+
+
+Experiments show that:
+Hierarchical clustering can reduce inference costs significantly while maintaining competitive accuracy compared to flat retrieval methods1
+. For instance, clustering the gallery into around 800 groups is enough to capture broad geographical distinctions with minimal loss in precision.
+RAG inference with a capable LLM often performs better than purely retrieval-based approaches, particularly for ambiguous or underrepresented cases, boosting accuracy at narrower distance thresholds.
+Fine-grained text embeddings, such as neighborhood-focused prompts, enhance the model’s ability to differentiate locations that look visually similar from a distance but are in different parts of a city or region.
+When tested on large datasets like MP16-Pro, the combination of a powerful image encoder (e.g., a ViT-based CLIP) and a well-tuned GPS encoder achieves strong performance across multiple geographic levels. The model also benefits substantially from an efficient data pipeline, such as precomputing embeddings and streaming data on the fly during training.
+
+### Samples
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/geolocation_samples.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Two samples from the IM2GPS3K dataset. For each image, we provide the actual location, the final
+predicted location, and the RAG-based inference predictions using different numbers of candidate references supplied to the large multimodal models (LMMs).
+
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Future Directions
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+Looking ahead, there are several avenues for continued improvement:
+Deeper Hierarchies: Instead of just two clustering levels, one could extend this to three or four levels to handle extremely large galleries and zoom down to very specific coordinates with minimal overhead.
+Fine-Grained Language Cues: Incorporating textual clues (think city landmarks or neighborhoods) into the embedded representation can help in densely populated and architecturally diverse areas1
+.
+Scaling Up: For truly global applications, we might consider galleries of over a million coordinates. The hierarchical approach is well suited to this scenario, though additional techniques (such as beam search) might be required for further efficiency.
+Generation-Based Refinements: Using techniques from advanced generative models or diffusion models can augment training data for poorly represented locations, and large language models can act as “validators” to refine final predictions.
+By uniting large-scale visual encoders with hierarchical clustering and retrieval-augmented generation, we can significantly improve image geolocation systems and bring them closer to solving real-world applications—from next-level gaming to humanitarian goals.
