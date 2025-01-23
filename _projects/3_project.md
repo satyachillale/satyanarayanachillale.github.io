@@ -8,7 +8,7 @@ category: work
 giscus_comments: false
 ---
 
-[[Project Paper]](https://satyachillale.github.io/assets/pdf/CoLA_kernels_report.pdf) [[Presentation]](https://satyachillale.github.io/assets/pdf/cola_kernels_presentation.pdf) [[Code]](https://github.com/satyachillale/cola)
+[[Project Paper]](https://satyachillale.github.io/assets/pdf/CoLA_kernels_report.pdf) [[Presentation]](https://satyachillale.github.io/assets/pdf/cola_presentation.pdf) [[Code]](https://github.com/satyachillale/cola)
 
 CoLA, short for Compositional Linear Algebra, is a framework that tackles large-scale linear algebra tasks like matrix solves and eigenvalue problems in machine learning and scientific computing. While CoLA can automatically compose operations based on matrix structures (like sparsity or low-rank factorizations), its default Python-level implementations and dispatch mechanisms often lead to performance bottlenecks on GPUs. Below is a technical overview of how custom fused CUDA kernels can alleviate these bottlenecks and speed up select operations such as Arnoldi iterations, Cholesky decomposition, trace estimation, and SVD.
 
