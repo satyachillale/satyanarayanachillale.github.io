@@ -5,7 +5,7 @@ description: A Dive into Masked Conditional Diffusion and U-Net
 img: assets/img/image_21.png
 importance: 1
 category: work
-related_publications: true
+related_publications: false
 ---
 
 [[Project Paper]](assets/pdf/DLProject.pdf) [[Presentation]](assets/pdf/DLPresentation.pdf) [[Code]](https://github.com/satyachillale/paradigm)
