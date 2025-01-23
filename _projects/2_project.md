@@ -8,7 +8,7 @@ category: work
 giscus_comments: false
 ---
 
-[[Project Paper]]("assets/pdf/CV_project_image_geolocation_final.pdf") [[Presentation]]("assets/pdf/Image-Geolocation.pdf") [[Code]](https://github.com/satyachillale/g3-gg)
+[[Project Paper]](https://satyachillale.github.io/assets/pdf/CV_project_image_geolocation_final.pdf) [[Presentation]](https://satyachillale.github.io/assets/pdf/Image-Geolocation.pdf) [[Code]](https://github.com/satyachillale/g3-gg)
 
 ### Introduction
 

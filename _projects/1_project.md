@@ -8,7 +8,7 @@ category: work
 related_publications: false
 ---
 
-[[Project Paper]]("assets/pdf/DLProject.pdf") [[Presentation]]("assets/pdf/DLPresentation.pdf") [[Code]](https://github.com/satyachillale/paradigm)
+[[Project Paper]](https://satyachillale.github.io/assets/pdf/DLProject.pdf) [[Presentation]](https://satyachillale.github.io/assets/pdf/DLPresentation.pdf) [[Code]](https://github.com/satyachillale/paradigm)
 
 
 The field of video frame prediction and image segmentation has witnessed remarkable advancements, driven by innovative machine learning models. This blog post explores a cutting-edge project that combines Masked Conditional Video Diffusion (MCVD) for video frame prediction and the U-Net architecture for image segmentation. The study demonstrates how these models synergize to tackle the challenges of generating future video frames and analyzing them with precision.
