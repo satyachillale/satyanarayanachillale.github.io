@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "A growing collection of my cool projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -401,7 +401,7 @@ ninja.data = [{
               window.location.href = "/projects/1_project/";
             },},{id: "projects-image-geolocation",
           title: 'Image Geolocation',
-          description: "a project with a background image and giscus comments",
+          description: "Predicting geographic coordinates from images using hierarchical clustering and retrieval augmented generation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{
